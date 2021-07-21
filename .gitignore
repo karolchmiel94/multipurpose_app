@@ -1,0 +1,17 @@
+.idea
+.DS_Store
+.vscode/
+
+__pycache__
+*.pyc
+.env
+.cache
+node_modules
+multipurpose_app/static/dist
+multipurpose_app/static_root
+.env
+/local
+main/.env
+media
+yarn-error.log
+.vscode/tags
