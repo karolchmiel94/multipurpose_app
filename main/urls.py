@@ -15,12 +15,12 @@ Including another URLconf
 """
 from django.contrib import admin, sitemaps
 from django.contrib.sitemaps.views import sitemap
-from django.conf.global_settings import MEDIA_URL, MEDIA_ROOT, DEBUG
 from django.urls import path
 from django.urls.conf import include
 from django.conf.urls.static import static
 
 from blog.sitemaps import PostSitemap
+from main.settings import MEDIA_URL, MEDIA_ROOT, DEBUG
 
 sitemaps = {
     "posts": PostSitemap,
@@ -30,6 +30,7 @@ urlpatterns = [
     path("admin/", admin.site.urls),
     path("blog/", include("blog.urls", namespace="blog")),
     path("account/", include("account.urls", namespace="account")),
+    path("shop/", include("shop.urls", namespace="shop")),
     path("social-auth/", include("social_django.urls", namespace="social")),
     path(
         "sitemap.xml",
@@ -39,5 +40,4 @@ urlpatterns = [
     ),
 ]
 
-if DEBUG:
-    urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)
+urlpatterns += static(MEDIA_URL, document_root=MEDIA_ROOT)

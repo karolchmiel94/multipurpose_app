@@ -53,6 +53,8 @@ INSTALLED_APPS = [
     "django.contrib.sitemaps",
     "django.contrib.postgres",
     "blog.apps.BlogConfig",
+    "shop.apps.ShopConfig",
+    "cart.apps.CartConfig",
     "taggit",
     "social_django",
 ]
@@ -170,3 +172,5 @@ EMAIL_BACKEND = "django.core.mail.backends.console.EmailBackend"
 LOGIN_REDIRECT_URL = "account:dashboard"
 LOGIN_URL = "account:login"
 LOGOUT_URL = "accout:logout"
+
+CART_SESSION_ID = "cart"

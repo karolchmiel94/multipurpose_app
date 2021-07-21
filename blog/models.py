@@ -68,7 +68,7 @@ class Comment(TimeStampMixin):
         return f"Comment by {self.name} on {self.post}"
 
 
-# mofe to signal's.py
+# move to signal's.py
 def post_pre_save_receiver(sender, instance: Post, **kwargs):
     instance.slug = generate_unique_slug(instance, instance.title)
 
