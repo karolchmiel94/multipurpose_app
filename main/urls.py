@@ -32,6 +32,7 @@ urlpatterns = [
     path("account/", include("account.urls", namespace="account")),
     path("shop/", include("shop.urls", namespace="shop")),
     path("social-auth/", include("social_django.urls", namespace="social")),
+    path("cart/", include("cart.urls", namespace="cart")),
     path(
         "sitemap.xml",
         sitemap,
