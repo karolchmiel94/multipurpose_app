@@ -10,15 +10,10 @@ For the full list of settings and their values, see
 https://docs.djangoproject.com/en/3.2/ref/settings/
 """
 
+import os
 from pathlib import Path
 
 import environ
-from django.conf.global_settings import (
-    EMAIL_BACKEND,
-    EMAIL_HOST,
-    EMAIL_PORT,
-    EMAIL_USE_TLS,
-)
 
 env = environ.Env()
 environ.Env.read_env()
@@ -36,7 +31,10 @@ SITE_ID = 1
 SECRET_KEY = env("SECRET_KEY")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = env("DEBUG")
+if env("DEBUG") == "True":
+    DEBUG = True
+else:
+    DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -56,6 +54,7 @@ INSTALLED_APPS = [
     "django.contrib.postgres",
     "blog.apps.BlogConfig",
     "taggit",
+    "social_django",
 ]
 
 MIDDLEWARE = [
@@ -86,7 +85,6 @@ TEMPLATES = [
     },
 ]
 
-
 WSGI_APPLICATION = "main.wsgi.application"
 
 # Database
@@ -107,6 +105,12 @@ DATABASES = {
     }
 }
 
+
+AUTHENTICATION_BACKENDS = [
+    "django.contrib.auth.backends.ModelBackend",
+    "account.authentication.EmailAuthBackend",
+    "social_core.backends.twitter.TwitterOAuth",
+]
 
 # Password validation
 # https://docs.djangoproject.com/en/3.2/ref/settings/#auth-password-validators
@@ -145,6 +149,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
 STATIC_URL = "/static/"
+
+MEDIA_URL = "/media/"
+MEDIA_ROOT = os.path.join(BASE_DIR, "media/")
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
