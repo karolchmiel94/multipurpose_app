@@ -12,9 +12,16 @@ class Order(TimeStampMixin):
     postal_code = models.CharField(max_length=50)
     city = models.CharField(max_length=128)
     paid = models.BooleanField(default=False)
+    braintree_id = models.CharField(max_length=200, blank=True)
 
     class Meta:
         ordering = ("-created_at",)
+
+    def __str__(self) -> str:
+        return f"Order {self.id}"
+
+    def get_total_cost(self):
+        return sum(item.get_cost() for item in self.items.all())
 
 
 class OrderItem(models.Model):

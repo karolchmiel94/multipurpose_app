@@ -56,6 +56,7 @@ INSTALLED_APPS = [
     "shop.apps.ShopConfig",
     "cart.apps.CartConfig",
     "orders.apps.OrdersConfig",
+    "payments.apps.PaymentsConfig",
     "taggit",
     "social_django",
 ]
@@ -152,6 +153,7 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/3.2/howto/static-files/
 
+STATIC_ROOT = os.path.join(BASE_DIR, "static/")
 STATIC_URL = "/static/"
 
 MEDIA_URL = "/media/"
@@ -176,3 +178,18 @@ LOGIN_URL = "account:login"
 LOGOUT_URL = "accout:logout"
 
 CART_SESSION_ID = "cart"
+
+
+BRAINTREE_MERCHANT_ID = env("BRAINTREE_MERCHANT_ID")
+BRAINTREE_PUBLIC_KEY = env("BRAINTREE_PUBLIC_KEY")
+BRAINTREE_PRIVATE_KEY = env("BRAINTREE_PRIVATE_KEY")
+
+import braintree
+
+
+BRAINTREE_CONF = braintree.Configuration(
+    braintree.Environment.Sandbox,
+    BRAINTREE_MERCHANT_ID,
+    BRAINTREE_PUBLIC_KEY,
+    BRAINTREE_PRIVATE_KEY,
+)

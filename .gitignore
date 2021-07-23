@@ -16,3 +16,4 @@ media
 yarn-error.log
 .vscode/tags
 multipurpose_app
+static/
