@@ -55,6 +55,7 @@ INSTALLED_APPS = [
     "blog.apps.BlogConfig",
     "shop.apps.ShopConfig",
     "cart.apps.CartConfig",
+    "orders.apps.OrdersConfig",
     "taggit",
     "social_django",
 ]
