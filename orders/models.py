@@ -1,7 +1,11 @@
+from decimal import Decimal
+
+from django.core.validators import MaxValueValidator, MinValueValidator
 from django.db import models
 
-from utils.model_utils import TimeStampMixin
+from coupons.models import Coupon
 from shop.models import Product
+from utils.model_utils import TimeStampMixin
 
 
 class Order(TimeStampMixin):
@@ -13,6 +17,12 @@ class Order(TimeStampMixin):
     city = models.CharField(max_length=128)
     paid = models.BooleanField(default=False)
     braintree_id = models.CharField(max_length=200, blank=True)
+    coupon = models.ForeignKey(
+        Coupon, blank=True, null=True, on_delete=models.CASCADE, related_name="orders"
+    )
+    discount = models.IntegerField(
+        default=0, validators=[MinValueValidator(0), MaxValueValidator(100)]
+    )
 
     class Meta:
         ordering = ("-created_at",)
@@ -20,8 +30,14 @@ class Order(TimeStampMixin):
     def __str__(self) -> str:
         return f"Order {self.id}"
 
+    def get_discount(self):
+        return sum(item.get_cost() for item in self.items.all()) * (
+            self.discount / Decimal(100)
+        )
+
     def get_total_cost(self):
-        return sum(item.get_cost() for item in self.items.all())
+        total_cost = sum(item.get_cost() for item in self.items.all())
+        return total_cost - total_cost * (self.discount / Decimal(100))
 
 
 class OrderItem(models.Model):

@@ -57,6 +57,7 @@ INSTALLED_APPS = [
     "cart.apps.CartConfig",
     "orders.apps.OrdersConfig",
     "payments.apps.PaymentsConfig",
+    "coupons.apps.CouponsConfig",
     "taggit",
     "social_django",
 ]
@@ -193,3 +194,9 @@ BRAINTREE_CONF = braintree.Configuration(
     BRAINTREE_PUBLIC_KEY,
     BRAINTREE_PRIVATE_KEY,
 )
+
+
+# Terminal start commands
+# Django: python manage.py runserver
+# Celery main: celery -A main worker -l info
+# Flower: celery -A main flower
