@@ -63,6 +63,7 @@ INSTALLED_APPS = [
     "taggit",
     "social_django",
     "rosetta",
+    "parler",
 ]
 
 MIDDLEWARE = [
@@ -144,13 +145,23 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/3.2/topics/i18n/
 
-LANGUAGE_CODE = "en-us"
+LANGUAGE_CODE = "en"
 LANGUAGES = (
     ("en", _("English")),
     ("pl", _("Polish")),
 )
 LOCALE_PATHS = (os.path.join(BASE_DIR, "locale/"),)
 
+PARLER_LANGUAGES = {
+    SITE_ID: (
+        {"code": "en"},
+        {"code": "pl"},
+    ),
+    "default": {
+        "fallback": "en",
+        "hide_untranslated": False,
+    },
+}
 
 TIME_ZONE = "CET"
 
