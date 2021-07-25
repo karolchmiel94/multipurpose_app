@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-24 16:47+0200\n"
+"POT-Creation-Date: 2021-07-25 15:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -18,58 +18,55 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: cart/forms.py:9 cart/templates/cart/detail.html:16
+#: cart/forms.py:9 cart/templates/cart/detail.html:15
 msgid "Quantity"
 msgstr ""
 
-#: cart/templates/cart/detail.html:7 cart/templates/cart/detail.html:10
+#: cart/templates/cart/detail.html:6 cart/templates/cart/detail.html:9
 msgid "Your shopping cart"
 msgstr ""
 
-#: cart/templates/cart/detail.html:14
+#: cart/templates/cart/detail.html:13
 msgid "Image"
 msgstr ""
 
-#: cart/templates/cart/detail.html:15
+#: cart/templates/cart/detail.html:14
 msgid "Product"
 msgstr ""
 
-#: cart/templates/cart/detail.html:17
+#: cart/templates/cart/detail.html:16
 msgid "Remove"
 msgstr ""
 
-#: cart/templates/cart/detail.html:18
+#: cart/templates/cart/detail.html:17
 msgid "Unit price"
 msgstr ""
 
-#: cart/templates/cart/detail.html:19
+#: cart/templates/cart/detail.html:18
 msgid "Price"
 msgstr ""
 
-#: cart/templates/cart/detail.html:54
+#: cart/templates/cart/detail.html:53
 msgid "Subtotal"
 msgstr ""
 
-#: cart/templates/cart/detail.html:59
+#: cart/templates/cart/detail.html:58
 #, python-format
-msgid ""
-"\n"
-"        <td>\"%(code)s\" coupon (%(discount)s%% off)</td>\n"
-"        "
+msgid "<td>\"%(code)s\" coupon (%(discount)s%% off)</td>"
 msgstr ""
 
-#: cart/templates/cart/detail.html:69
+#: cart/templates/cart/detail.html:66
 msgid "Total"
 msgstr ""
 
-#: cart/templates/cart/detail.html:77
+#: cart/templates/cart/detail.html:74
 msgid "Apply a coupon:"
 msgstr ""
 
-#: cart/templates/cart/detail.html:84
+#: cart/templates/cart/detail.html:81
 msgid "Continue shopping"
 msgstr ""
 
-#: cart/templates/cart/detail.html:85
+#: cart/templates/cart/detail.html:82
 msgid "Checkout"
 msgstr ""

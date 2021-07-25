@@ -62,6 +62,7 @@ INSTALLED_APPS = [
     "coupons.apps.CouponsConfig",
     "taggit",
     "social_django",
+    "rosetta",
 ]
 
 MIDDLEWARE = [

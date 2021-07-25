@@ -17,7 +17,14 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+#: payments/urls.py:9
+msgid "process/"
+msgstr ""
 
-#: coupons/forms.py:6
-msgid "Coupon"
+#: payments/urls.py:10
+msgid "done/"
+msgstr ""
+
+#: payments/urls.py:11
+msgid "canceled/"
 msgstr ""

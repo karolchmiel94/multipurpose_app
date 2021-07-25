@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-24 16:47+0200\n"
+"POT-Creation-Date: 2021-07-25 15:07+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -24,11 +24,15 @@ msgstr ""
 msgid "My shop"
 msgstr "Sklep"
 
-#: shop/templates/shop/base.html:20
+#: shop/templates/shop/base.html:19
+msgid "Language"
+msgstr ""
+
+#: shop/templates/shop/base.html:36
 msgid "Your cart:"
 msgstr "Twój koszyk:"
 
-#: shop/templates/shop/base.html:22
+#: shop/templates/shop/base.html:38
 #, python-format
 msgid ""
 "\n"
@@ -38,10 +42,14 @@ msgid_plural ""
 "\n"
 "                                %(items)s items, $%(total)s\n"
 "                        "
-msgstr[0] "\n%(items) sztuka, $%(total) \n"
-msgstr[1] "\n%(items) sztuk, $%(total) \n"
+msgstr[0] ""
+"\n"
+"%(items) sztuka, $%(total) \n"
+msgstr[1] ""
+"\n"
+"%(items) sztuk, $%(total) \n"
 
-#: shop/templates/shop/base.html:29
+#: shop/templates/shop/base.html:45
 msgid "Your cart is empty."
 msgstr "Twój koszyk jest pusty"
 
@@ -49,15 +57,15 @@ msgstr "Twój koszyk jest pusty"
 msgid "Add to cart"
 msgstr "Dodaj do koszyka"
 
-#: shop/templates/shop/product/list.html:7
-#: shop/templates/shop/product/list.html:25
+#: shop/templates/shop/product/list.html:8
+#: shop/templates/shop/product/list.html:26
 msgid "Products"
 msgstr "Producty"
 
-#: shop/templates/shop/product/list.html:12
+#: shop/templates/shop/product/list.html:13
 msgid "Categories"
 msgstr "Kategorie"
 
-#: shop/templates/shop/product/list.html:15
+#: shop/templates/shop/product/list.html:16
 msgid "All"
 msgstr "Wszystko"

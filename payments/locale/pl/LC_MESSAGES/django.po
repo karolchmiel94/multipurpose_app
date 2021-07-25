@@ -19,47 +19,14 @@ msgstr ""
 "Plural-Forms: nplurals=4; plural=(n==1 ? 0 : (n%10>=2 && n%10<=4) && (n"
 "%100<12 || n%100>14) ? 1 : n!=1 && (n%10>=0 && n%10<=1) || (n%10>=5 && n"
 "%10<=9) || (n%100>=12 && n%100<=14) ? 2 : 3);\n"
-
-#: main/settings.py:149
-msgid "English"
-msgstr "Angielski"
-
-#: main/settings.py:150
-msgid "Polish"
-msgstr "Polski"
-
-#: main/urls.py:34
-msgid "admin/"
+#: payments/urls.py:9
+msgid "process/"
 msgstr ""
 
-#: main/urls.py:36
-msgid "blog/"
+#: payments/urls.py:10
+msgid "done/"
 msgstr ""
 
-#: main/urls.py:37
-msgid "account/"
-msgstr ""
-
-#: main/urls.py:38
-msgid "shop/"
-msgstr ""
-
-#: main/urls.py:39
-msgid "social-auth/"
-msgstr ""
-
-#: main/urls.py:40
-msgid "cart/"
-msgstr ""
-
-#: main/urls.py:41
-msgid "orders/"
-msgstr ""
-
-#: main/urls.py:42
-msgid "payments/"
-msgstr ""
-
-#: main/urls.py:43
-msgid "coupons/"
+#: payments/urls.py:11
+msgid "canceled/"
 msgstr ""
