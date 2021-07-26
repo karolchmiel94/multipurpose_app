@@ -64,6 +64,7 @@ INSTALLED_APPS = [
     "social_django",
     "rosetta",
     "parler",
+    "localflavor",
 ]
 
 MIDDLEWARE = [
