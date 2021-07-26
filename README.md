@@ -27,6 +27,7 @@ email: karolch94@gmail.com
 
 - [Table of Contents](#table-of-contents)
 - [About The Project](#about-the-project)
+- [Technologies used](#technologies-used)
 - [Functionalities description](#functionalities-description)
   - [Blog](#blog)
   - [Shop](#shop)
@@ -37,6 +38,14 @@ email: karolch94@gmail.com
 
 As most of my Django projects were utilizing REST API to exchange data with frontend applications, I wanted to strengthen and learn more about Django's functionalities to present data with dynamic HTML templates. Moreover, I wanted to move my focus on topics of caching, message brokers, tests, and project localization and internalization.
 The result of it is a simple blog and shop.
+
+
+<!-- Technologies used -->
+## Technologies used
+
+- PostgreSQL,
+- Celery,
+- Redis
 
 
 <!-- Functionalities description -->
@@ -89,6 +98,8 @@ Orders application provides additional functionalities consisting of:
 * Translation
 
 Project is translated into Polish and English language. HTML files, forms and part of model fields names have added translation to them. Text for both languages are saved in .po files and compiled to .mo ones. Users can switch between languages with navbar link.
+
+Rosetta library has been added and configured so internalization can be done through admin panel.
 
 As static texts on website are translated, model fields should be available in both Polish and English languages as well. Translation is being achieved with django-parler creating separate tables for each model that contains translations.
 
