@@ -53,19 +53,19 @@ The result of it is a simple blog and shop.
 
 Short description of things this project consist of.
 
-#### Blog
+### Blog
 
 Blog is as simple as it gets. Posts have their authors and tags linked to them. Users can browse posts, filter them, add comments to them and share them via e-mail.
 
-##### RSS
+* RSS
 
 Users can subscribe to blog feed using feed aggregator and have latest posts fetched as XML.
 
-##### Sitemap
+* Sitemap
 
 Blog has sitemap generated on a weekly basis to help crawlers index it's content.
 
-#### Full-text search
+* Full-text search
 
 Posts can be searched against their titles and descriptions. Search vectors for them are weighted, with title being the primary one. Stemming provides better search results so users can spend more time reading posts, instead of looking for something to read.
 
@@ -74,28 +74,28 @@ Posts can be searched against their titles and descriptions. Search vectors for 
 Shop is a place where users can browse products, add them to cart and finish checkout
 process by placing order.
 
-#### Product catalog
+* Product catalog
 
 Products can be added via admin panel. Users can browse them on a website, filter them by category and order them by their price.
 
-#### Cart
+* Cart
 
 Products added to cart are saved in session so users don't have to be logged in to create cart with products. To being able to show user his cart overview on each page, cart is added to each request through context processor.
 
 User can add coupon code to his cart, applying a discount to his next order.
 
-#### Orders
+* Orders
 
 Once user goes through checkout, order is being placed. As test payment processor is disabled, user is just being shown that transaction went through and an email is being send to him using asynchronous task using Celery.
 
-#### Orders admin panel
+* Orders admin panel
 
 Orders application provides additional functionalities consisting of:
 - action exporting selected orders to CSV file,
 - custom view for order detail,
 - generating invoice for selected order.
 
-#### Translation
+* Translation
 
 Project is translated into Polish and English language. HTML files, forms and part of model fields names have added translation to them. Text for both languages are saved in .po files and compiled to .mo ones. Users can switch between languages with navbar link.
 
@@ -105,7 +105,7 @@ As static texts on website are translated, model fields should be available in b
 
 Localization formatts dates and prices numeral system.
 
-#### Product recommendations
+* Product recommendations
 
 After user places an order, products from cart are being paired up and saved in Redis. This allows to show pairs of products as 'bought together' and be shown on a product detail page or on a checkout page.
 
@@ -114,19 +114,19 @@ After user places an order, products from cart are being paired up and saved in 
 
 Things I'm plannig to add to this project consists of:
 
-#### Populating database with random data:
+* Populating database with random data:
 
 Websites always look better when they're full of content. I'm planning to create custom admin action for each application model which will generate given number of random objects. For that reason, I can use Faker library.
 
-#### Tests:
+* Tests:
 
 As the project grows larger and larger, I feel more and more guilty that I haven't written tests for the code yet.
 
-#### Docker:
+* Docker:
 
 To speed up the process of writing the code, I haven't dockerize my application.
 I need to configure docker.
 
-#### Styling:
+* Styling:
 
 Current UI version of the project was given very little time of polishing and need to be styled to not evoke feeling of frightening and disgust in user's eyes.
