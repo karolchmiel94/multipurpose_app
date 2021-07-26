@@ -11,10 +11,10 @@ email: karolch94@gmail.com
 <!-- PROJECT LOGO -->
 <br/>
 <p align="center">
-    <a href="https://github.com/karolchmiel94/multipurpose_app">
+    <!-- <a href="https://github.com/karolchmiel94/multipurpose_app">
         <img src="" alt="Logo" width="80" height="80">
-    </a>
-<h3 align="center"><a href="https://github.com/karolchmiel94/multipurpose_app">multipurpose-app</a></h3>
+    </a> -->
+    <h3 align="center"><a href="https://github.com/karolchmiel94/multipurpose_app">multipurpose-app</a></h3>
     <p align="center">
         Simple e-commerce website with blog
         <br />
