@@ -217,8 +217,14 @@ BRAINTREE_CONF = braintree.Configuration(
     BRAINTREE_PRIVATE_KEY,
 )
 
+REDIS_HOST = "localhost"
+REDIS_PORT = 6379
+REDIS_DB = 0
+
 
 # Terminal start commands
 # Django: python manage.py runserver
 # Celery main: celery -A main worker -l info
 # Flower: celery -A main flower
+# Redis:
+#   start: redis-server
