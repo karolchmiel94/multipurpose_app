@@ -111,18 +111,18 @@ def post_search(request):
                 "body", weight="B"
             )
             search_query = SearchQuery(query)
-            # results = (
-            #     Post.published.annotate(rank=SearchRank(search_vector, search_query))
-            #     .filter(rank__gte=0.3)
-            #     .order_by("-rank")
-            # )  # search by title and body with weights
             results = (
-                Post.published.annotate(
-                    similarity=TrigramSimilarity("title", query),
-                )
-                .filter(similarity__gt=0.1)
-                .order_by("-similarity")
-            )  # searching  with trigram similarity
+                Post.published.annotate(rank=SearchRank(search_vector, search_query))
+                .filter(rank__gte=0.3)
+                .order_by("-rank")
+            )  # search by title and body with weights
+            # results = (
+            #     Post.published.annotate(
+            #         similarity=TrigramSimilarity("title", query),
+            #     )
+            #     .filter(similarity__gt=0.1)
+            #     .order_by("-similarity")
+            # )  # searching against title with trigram similarity
     return render(
         request,
         "blog/post/search.html",

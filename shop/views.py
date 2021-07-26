@@ -18,6 +18,9 @@ def product_list(request, category_slug=None):
             translations__slug=category_slug,
         )
         products = products.filter(category=category)
+    query = request.GET.get("ordering")
+    if query:
+        products = products.order_by(query)
     return render(
         request,
         "shop/product/list.html",
