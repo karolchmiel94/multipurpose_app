@@ -53,15 +53,15 @@ The result of it is a simple blog and shop.
 
 Short description of things this project consist of.
 
-### Blog
+#### Blog
 
 Blog is as simple as it gets. Posts have their authors and tags linked to them. Users can browse posts, filter them, add comments to them and share them via e-mail.
 
-#### RSS
+##### RSS
 
 Users can subscribe to blog feed using feed aggregator and have latest posts fetched as XML.
 
-#### Sitemap
+##### Sitemap
 
 Blog has sitemap generated on a weekly basis to help crawlers index it's content.
 
