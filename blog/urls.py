@@ -1,4 +1,3 @@
-from blog.feeds import LatestPostsFeed
 from django.urls import path
 
 from . import views

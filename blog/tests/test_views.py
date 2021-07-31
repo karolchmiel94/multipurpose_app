@@ -24,8 +24,6 @@ class TestViews(TestCase):
 
     def test_post_detail_GET(self):
         response = self.client.get(self.detail_url)
-        print(self.detail_url)
-        print(self.post1.slug)
 
         self.assertEquals(response.status_code, 200)
         self.assertTemplateUsed(response, "blog/post/detail.html")
