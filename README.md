@@ -109,6 +109,10 @@ Localization formatts dates and prices numeral system.
 
 After user places an order, products from cart are being paired up and saved in Redis. This allows to show pairs of products as 'bought together' and be shown on a product detail page or on a checkout page.
 
+* Tests
+
+Tests have been added for part of urls, views, models. Additionaly, tests cover data saved in session when creating cart and product recommender engine.
+
 <!-- TO-DO -->
 ## TO-DO
 
@@ -117,10 +121,6 @@ Things I'm plannig to add to this project consists of:
 * Populating database with random data:
 
 Websites always look better when they're full of content. I'm planning to create custom admin action for each application model which will generate given number of random objects. For that reason, I can use Faker library.
-
-* Tests:
-
-As the project grows larger and larger, I feel more and more guilty that I haven't written tests for the code yet.
 
 * Docker:
 
